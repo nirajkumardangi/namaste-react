@@ -1,0 +1,34 @@
+.navbar {
+  height: 3rem;
+  padding: 1rem 4rem;
+  margin: 0 -4rem;
+  background-color: #23180D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo a {
+  font-size: 2.5rem;
+  color: #FFA33C;
+}
+
+a {
+  color: rgba(255, 255, 255, 0.87);
+  text-decoration: none;
+}
+
+.navbar-items ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style-type: none;
+}
+.navbar-items li {
+  margin: 10px;
+  font-size: 1.1rem;
+}
+
+.navbar-items li:hover{
+  color: #FFA33C;
+  cursor: pointer;
+}
