@@ -1,5 +1,14 @@
 .most-popular-recipes {
   margin-top: 2rem;
+  /* margin-bottom: 5rem; */
+}
+
+.recipe-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
 }
 
 h2 {

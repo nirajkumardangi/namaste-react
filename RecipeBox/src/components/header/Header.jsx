@@ -11,7 +11,8 @@ export default function Header() {
             <li><a href='#'>Recipes</a></li>
             <li><a href='#'>Contact</a></li>
             <li><a href='#'>About</a></li>
-            <li><a href='#'>🔍</a></li>
+            <li><a href='#'><i id={styles['heart-icon']} className="fa-regular fa-heart"></i></a></li>
+            <li><a href='#'><i className="fa-solid fa-magnifying-glass"></i></a></li>
           </ul>
         </div>
       </nav>

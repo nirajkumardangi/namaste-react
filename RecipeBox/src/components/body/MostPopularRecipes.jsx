@@ -1,4 +1,5 @@
-import styles from './MostPopularRecipes.module.css'
+import styles from './MostPopularRecipes.module.css';
+import PopularRecipesCards from './PopularRecipesCards';
 
 export default function () {
   return (
@@ -9,6 +10,12 @@ export default function () {
           Don’t miss these popular recipes that are sure to please your whole
           family!
         </p>
+        <div className={styles['recipe-container']}>
+          <PopularRecipesCards />
+          <PopularRecipesCards />
+          <PopularRecipesCards />
+          <PopularRecipesCards />
+        </div>
       </div>
     </>
   );
