@@ -1,0 +1,29 @@
+.categories-container {
+  margin-top: 4rem;
+}
+
+.header {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.lists {
+  margin: 0 0 0 -3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* gap: 1rem; */
+}
+
+.list {
+  list-style-type: none;
+}
+
+.image {
+  width: 14.5rem;
+}
+
+.title {
+  text-align: center;
+}

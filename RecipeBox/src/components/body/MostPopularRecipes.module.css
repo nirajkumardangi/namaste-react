@@ -1,6 +1,31 @@
+.search-bar {
+  margin: 2rem auto 0;
+  display: flex;
+  width: 30rem;
+}
+
+.search-bar input {
+  width: 30rem;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0 10px;
+  outline: none;
+}
+
+.search-bar button {
+  background-color: #FFA33C;
+  border-radius: 0px 4px 4px 0;
+  border: none;
+}
+
+.search-bar button:hover {
+  background-color: #F74F22;
+}
+
 .most-popular-recipes {
   margin-top: 2rem;
-  /* margin-bottom: 5rem; */
 }
 
 .recipe-container{
@@ -8,13 +33,10 @@
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
+  row-gap: 3.5rem;
   flex-wrap: wrap;
 }
 
-h2 {
-  font-size: 2.3rem;
-}
-
-p {
+.para {
   margin-left: 1rem;
 }

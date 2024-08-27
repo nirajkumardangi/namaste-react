@@ -1,4 +1,6 @@
+import MealsCategory from './components/body/MealsCategory';
 import MostPopularRecipes from './components/body/MostPopularRecipes';
+import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 
 export default function App() {
@@ -6,6 +8,8 @@ export default function App() {
     <>
       <Header />
       <MostPopularRecipes />
+      <MealsCategory />
+      <Footer />
     </>
   );
 }

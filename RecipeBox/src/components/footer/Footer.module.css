@@ -1,0 +1,69 @@
+.footer {
+  background-color: hsl(210, 13%, 16%);
+  color: #FFAC00;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  margin: 0 -4rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo h2 {
+  font-family: 'Kalam', cursive;
+  color: #F74F22;
+}
+
+.links h3,
+.socialMedia h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links ul li {
+  margin: 5px 0;
+}
+
+.links ul li a {
+  color: #FFAC00;
+  text-decoration: none;
+}
+
+.links ul li a:hover {
+  text-decoration: underline;
+}
+
+.socialMedia .icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.socialMedia .icons a {
+  color: #FFAC00;
+  font-size: 1.5rem;
+}
+
+.socialMedia .icons a:hover {
+  color: #F74F22;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #999;
+}

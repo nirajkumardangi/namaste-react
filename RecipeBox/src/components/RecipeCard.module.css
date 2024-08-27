@@ -1,11 +1,12 @@
 .recipe-container {
   width: 18rem;
   height: 25rem;
+  cursor: pointer;
 }
 
 .recipe-image{
   width: 100%;
-  height: 90%;
+  height: 95%;
   object-fit: cover;
 }
 
@@ -13,6 +14,3 @@
   font-size: 1.3rem;
   margin: 0;
 }
-
-
-

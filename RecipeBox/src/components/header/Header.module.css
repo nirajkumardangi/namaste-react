@@ -11,9 +11,10 @@
 .navbar-logo a {
   font-size: 2.5rem;
   color: #FFA33C;
+  text-decoration: none;
 }
 
-a {
+.menu-items a {
   color: rgba(255, 255, 255, 0.87);
   text-decoration: none;
 }
@@ -31,8 +32,4 @@ a {
 .navbar-items li:hover{
   color: #FFA33C;
   cursor: pointer;
-}
-
-i {
-  font-size: 1.2rem;
 }
