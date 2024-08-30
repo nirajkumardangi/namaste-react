@@ -1,14 +1,13 @@
-import MealsCategory from './components/body/MealsCategory';
-import MostPopularRecipes from './components/body/MostPopularRecipes';
+import { Outlet } from 'react-router-dom';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
+import Loader from './components/Loader';
 
 export default function App() {
   return (
     <>
       <Header />
-      <MostPopularRecipes />
-      <MealsCategory />
+      <Outlet />
       <Footer />
     </>
   );

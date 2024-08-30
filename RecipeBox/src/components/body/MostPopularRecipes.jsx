@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import RecipeCard from '../RecipeCard';
 import { MEAL_API } from '../../utils/constants/api';
 import Shimmer from '../Shimmer';
+import { Link } from 'react-router-dom';
 
 export default function MostPopularRecipes() {
   const [inputValue, setInputValue] = useState('');
@@ -56,11 +57,9 @@ export default function MostPopularRecipes() {
             [...Array(8).fill('')].map((_, index) => <Shimmer key={index} />)}
           {isAvailable &&
             mealsData.map((meal) => (
-              <RecipeCard
-                key={meal.idMeal}
-                imgUrl={meal.strMealThumb}
-                title={meal.strMeal}
-              />
+              <Link to={'/recipe-info/' + meal.idMeal} key={meal.idMeal}>
+                <RecipeCard imgUrl={meal.strMealThumb} title={meal.strMeal} />
+              </Link>
             ))}
         </div>
       </div>

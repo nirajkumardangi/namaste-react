@@ -24,12 +24,17 @@
   gap: 1.5rem;
   list-style-type: none;
 }
+
 .navbar-items li {
   margin: 10px;
   font-size: 1.1rem;
 }
 
-.navbar-items li:hover{
+.navbar-items li:hover {
   color: #FFA33C;
   cursor: pointer;
+}
+
+.liked{
+  color: #ff3535;
 }

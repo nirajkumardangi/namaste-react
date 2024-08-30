@@ -1,0 +1,24 @@
+.name{
+  text-align: center;
+}
+
+.area p {
+  display: inline-block;
+  color: #FFA33C;
+  margin-left: 1rem;
+}
+
+.area p span {
+  color: aliceblue;
+}
+
+.thumb{
+  display: flex;
+  margin: 0 auto;
+  object-fit: cover;
+  width: 90vw;
+  height: 90vh;
+}
+
+
+

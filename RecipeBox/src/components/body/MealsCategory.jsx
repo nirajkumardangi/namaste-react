@@ -20,7 +20,7 @@ export default function MealsCategory() {
      <hr />
       <h2 className={styles.header}>Search By Category</h2>
       <ul className={styles.lists}>
-        {mealsCategory.slice(0, 10).map((meal) => (
+        {mealsCategory.slice(0, 14).map((meal) => (
           <li className={styles.list} key={meal.idCategory}>
             <img className={styles.image} src={meal.strCategoryThumb} alt={meal.strCategory} />
             <p className={styles.title}>{meal.strCategory}</p>

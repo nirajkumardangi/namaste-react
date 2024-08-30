@@ -28,13 +28,25 @@
   margin-top: 2rem;
 }
 
-.recipe-container{
+.recipe-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
   row-gap: 3.5rem;
   flex-wrap: wrap;
+}
+
+.recipe-container a {
+  color: #ffffffde;
+}
+
+.recipe-container a:hover {
+  color: #FFA33C;
+  text-decoration: underline;
+  transition: all;
+  transition-property: all;
+  transition-duration: 0.2s;
 }
 
 .para {

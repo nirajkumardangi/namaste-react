@@ -1,6 +1,14 @@
+import { useState } from 'react';
 import styles from './Header.module.css';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
+  const [like, setLike] = useState(false);
+
+  function handleClick() {
+    setLike((prevLike) => !prevLike);
+  }
+
   return (
     <>
       <nav className={styles.navbar}>
@@ -10,28 +18,31 @@ export default function Header() {
         <div className={styles['navbar-items']}>
           <ul className={styles['menu-items']}>
             <li>
-              <a href='#'>Home</a>
+              <Link to='/'>Home</Link>
             </li>
             <li>
-              <a href='#'>Recipes</a>
+              <Link to='/recipes'>Recipes</Link>
             </li>
             <li>
-              <a href='#'>Contact</a>
+              <Link to='/contact'>Contact</Link>
             </li>
             <li>
-              <a href='#'>About</a>
+              <Link to='/about'>About</Link>
             </li>
             <li>
-              <a href='#'>
+              <Link to='' className={styles.like}>
                 <i
                   id={styles['heart-icon']}
-                  className='fa-regular fa-heart'></i>
-              </a>
+                  onClick={handleClick}
+                  className={`${
+                    like ? 'fa-solid' : 'fa-regular'
+                  } ${styles.liked} fa-heart `}></i>
+              </Link>
             </li>
             <li>
-              <a href='#'>
+              <Link to=''>
                 <i className='fa-solid fa-magnifying-glass'></i>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,0 +1,42 @@
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content {
+  text-align: center;
+  padding: 5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 4rem;
+  color: #343a40;
+}
+
+.message {
+  font-size: 1.25rem;
+  color: #6c757d;
+  margin: 20px 0;
+}
+
+.homeLink {
+  font-size: 1rem;
+  color: #ff8a05;
+  text-decoration: none;
+  border: 2px solid #ff8a05;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.homeLink:hover {
+  background-color: #ff8a05;
+  color: white;
+}
