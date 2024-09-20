@@ -1,37 +1,29 @@
 import styles from './MostPopularRecipes.module.css';
 import { useState, useEffect } from 'react';
 import RecipeCard from '../RecipeCard';
-import { MEAL_API } from '../../utils/constants/api';
+import { MEAL_API } from '../../utils/api';
 import Shimmer from '../Shimmer';
 import { Link } from 'react-router-dom';
+import ErrorMessage from '../ErrorMessage';
+import { useFetchFood } from '../../utils/useFetchFood';
 
 export default function MostPopularRecipes() {
   const [inputValue, setInputValue] = useState('');
-  const [mealsData, setMealsData] = useState([]);
-  const [isAvailable, setIsAvailable] = useState(false);
+  const [filteredMeals, setFilteredMeals] = useState([]);
 
+  const { isLoading, error, mealsData } = useFetchFood(MEAL_API);
+
+  // Search meals when the search input changes
   useEffect(() => {
-    async function fetchData() {
-      setIsAvailable(false);
-      try {
-        const response = await fetch(MEAL_API);
-        const data = await response.json();
-        setMealsData(data.meals || []); // Ensure mealsData is always an array
-        setIsAvailable(true);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+    if (inputValue.trim() === '') {
+      setFilteredMeals(mealsData); // Reset to original data when input is empty
+    } else {
+      const filteredData = mealsData.filter((meal) =>
+        meal.strMeal.toLowerCase().includes(inputValue.toLowerCase())
+      );
+      setFilteredMeals(filteredData);
     }
-
-    fetchData();
-  }, []);
-
-  function searchMeals() {
-    const filteredData = mealsData.filter((meal) =>
-      meal.strMeal.toLowerCase().includes(inputValue.toLowerCase())
-    );
-    setMealsData(filteredData);
-  }
+  }, [inputValue, mealsData]);
 
   return (
     <>
@@ -42,7 +34,7 @@ export default function MostPopularRecipes() {
           onChange={(e) => setInputValue(e.target.value)}
           placeholder='Search for a meal...'
         />
-        <button onClick={searchMeals}>Search</button>
+        <button>Search</button>
       </div>
 
       <div className={styles['most-popular-recipes']}>
@@ -53,14 +45,23 @@ export default function MostPopularRecipes() {
         </p>
 
         <div className={styles['recipe-container']}>
-          {!isAvailable &&
+          {/* Loading shimmer */}
+          {isLoading &&
             [...Array(8).fill('')].map((_, index) => <Shimmer key={index} />)}
-          {isAvailable &&
-            mealsData.map((meal) => (
-              <Link to={'/recipe-info/' + meal.idMeal} key={meal.idMeal}>
-                <RecipeCard imgUrl={meal.strMealThumb} title={meal.strMeal} />
-              </Link>
-            ))}
+
+          {/* Display recipes or Error */}
+          {!isLoading &&
+          !error &&
+          Array.isArray(filteredMeals) &&
+          filteredMeals.length > 0
+            ? filteredMeals.map((meal) => (
+                <Link to={'/recipe-info/' + meal.idMeal} key={meal.idMeal}>
+                  <RecipeCard imgUrl={meal.strMealThumb} title={meal.strMeal} />
+                </Link>
+              ))
+            : !isLoading && (
+                <ErrorMessage message={error || 'No recipes found.'} />
+              )}
         </div>
       </div>
     </>
