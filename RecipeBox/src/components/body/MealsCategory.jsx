@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { MEAL_CATEGORY_API } from '../../utils/constants/api';
+import { MEAL_CATEGORY_API } from '../../utils/api';
 import styles from './MealsCategory.module.css';
 
 export default function MealsCategory() {
