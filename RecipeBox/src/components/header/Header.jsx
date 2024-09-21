@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   const [like, setLike] = useState(false);
 
-  function handleClick() {
+  function handleClick(e) {
+    e.preventDefault();
     setLike((prevLike) => !prevLike);
   }
 
@@ -34,9 +35,9 @@ export default function Header() {
                 <i
                   id={styles['heart-icon']}
                   onClick={handleClick}
-                  className={`${
-                    like ? 'fa-solid' : 'fa-regular'
-                  } ${styles.liked} fa-heart `}></i>
+                  className={`${like ? 'fa-solid' : 'fa-regular'} ${
+                    styles.liked
+                  } fa-heart `}></i>
               </Link>
             </li>
             <li>
