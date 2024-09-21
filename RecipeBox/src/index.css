@@ -67,6 +67,7 @@ button:focus-visible {
 
 .error {
   color: #f92c1e;
+  text-align: center;
 }
 
 .offline {
@@ -74,4 +75,12 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.about-page {
+  padding: 1rem;
+}
+
+.contact-page {
+  padding: 1rem;
 }

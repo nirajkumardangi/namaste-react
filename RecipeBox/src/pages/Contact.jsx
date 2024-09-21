@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <>
+    <div className="contact-page">
       <h1>Contact us</h1>
       <hr />
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quod labore debitis consequuntur nam facilis numquam sequi, veritatis ipsa exercitationem illo ad pariatur obcaecati eum non vero quis, laboriosam incidunt hic, recusandae error! Perspiciatis labore odit hic magnam ex voluptatem, quis vel provident laudantium molestias sunt neque! Odio, voluptate commodi.</p>
@@ -13,6 +13,6 @@ export default function Contact() {
         reprehenderit? Itaque, enim nemo, tempora autem laborum dicta doloremque
         illo nihil maxime accusamus soluta labore.
       </p>
-    </>
+    </div>
   );
 }
