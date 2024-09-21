@@ -13,7 +13,7 @@
 }
 
 body {
-  margin: 0 4rem;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -67,4 +67,11 @@ button:focus-visible {
 
 .error {
   color: #f92c1e;
+}
+
+.offline {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

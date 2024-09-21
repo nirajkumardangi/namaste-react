@@ -8,14 +8,14 @@
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #444746;
+  color: #556d65;
 }
 
 .lists {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
-  padding: 0;
+  padding: 0 1rem;
   list-style-type: none;
 }
 

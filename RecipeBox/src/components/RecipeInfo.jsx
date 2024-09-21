@@ -28,7 +28,7 @@ export default function RecipeInfo() {
   return mealInfo.length === 0 ? (
     <Loader />
   ) : (
-    <>
+    <div className={styles.recipeInfo}>
       <h1 className={styles.name}>{mealInfo.strMeal}</h1>
       <img
         className={styles.thumb}
@@ -76,6 +76,6 @@ export default function RecipeInfo() {
           {mealInfo.strIngredient9} - {mealInfo.strMeasure9}
         </li>
       </ul>
-    </>
+    </div>
   );
 }

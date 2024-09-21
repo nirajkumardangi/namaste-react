@@ -6,11 +6,18 @@
 
 .recipe-image {
   width: 100%;
-  height: 95%;
+  height: 100%;
   object-fit: cover;
 }
 
 .recipe-title {
   font-size: 1.3rem;
   margin: 0;
+}
+
+@media (max-width: 480px) {
+  .recipe-container {
+    width: 11rem;
+    height: 14rem;
+  }
 }

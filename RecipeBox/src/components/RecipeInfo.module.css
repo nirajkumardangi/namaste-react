@@ -1,3 +1,7 @@
+.recipeInfo {
+  padding: 1rem 1rem;
+}
+
 .name{
   text-align: center;
 }
@@ -16,9 +20,5 @@
   display: flex;
   margin: 0 auto;
   object-fit: cover;
-  width: 90vw;
-  height: 90vh;
+  max-width: 100%;
 }
-
-
-

@@ -39,10 +39,10 @@ export default function MostPopularRecipes() {
 
       <div className={styles['most-popular-recipes']}>
         <h2>Most Popular</h2>
-        <p className={styles.para}>
+        {/* <p className={styles.para}>
           Don’t miss these popular recipes that are sure to please your whole
           family!
-        </p>
+        </p> */}
 
         <div className={styles['recipe-container']}>
           {/* Loading shimmer */}
