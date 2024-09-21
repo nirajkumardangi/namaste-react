@@ -4,9 +4,13 @@ import { useFetchMealCategory } from '../../utils/useFetchMealCategory';
 import Loader from '../Loader';
 
 export default function MealsCategory() {
-  const { category: mealsCategory, isLoading, error } = useFetchMealCategory(
+  const { categories: mealsCategory, isLoading, error } = useFetchMealCategory(
     MEAL_CATEGORY_API
   );
+
+  console.log(mealsCategory);
+  console.log(isLoading);
+  console.log(error);
 
   return (
     <div className={styles['categories-container']}>

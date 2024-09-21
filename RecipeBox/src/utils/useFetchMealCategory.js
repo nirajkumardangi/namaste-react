@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
 export function useFetchMealCategory(api) {
-  const [category, setCategory] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    async function fetchCategory() {
+    async function fetchCategories() {
       try {
         setIsLoading(true);
         setError('');
@@ -15,14 +15,14 @@ export function useFetchMealCategory(api) {
         const data = await res.json();
 
         if (!res.ok) {
-          throw new Error('Failed to fetch the category data.');
+          throw new Error('Failed to fetch the categories data.');
         }
 
-        if (!data.category) {
-          throw new Error('Category not found!');
+        if (!data.categories) {
+          throw new Error('categories not found!');
         }
 
-        setCategory(data.category);
+        setCategories(data.categories || []);
       } catch (err) {
         setError(err.message || 'An unexpected error occurred.');
       } finally {
@@ -30,8 +30,8 @@ export function useFetchMealCategory(api) {
       }
     }
 
-    fetchCategory();
+    fetchCategories();
   }, []);
 
-  return { category, isLoading, error };
+  return { categories, isLoading, error };
 }
